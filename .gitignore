@@ -154,3 +154,4 @@ cython_debug/
 
 datasets/
 logmel128_scaled/
+10class-fsfcnn-model-0.7620.hdf5
