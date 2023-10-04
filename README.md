@@ -6,7 +6,7 @@ Repository for investigating available acoustic scene classification (ASC) metho
 
 `LateFusion`is a modified fork of this [DCASE2019-Task1](https://github.com/McDonnell-Lab/DCASE2019-Task1), detailed in "Acoustic Scene Classification Using Deep Residual Networks with Late Fusion of Separated High and Low Frequency Paths", available [here](https://dcase.community/documents/challenge2019/technical_reports/DCASE2019_McDonnell_53.pdf).
 
-`RFR0CNN-2019` is a fork of [cpjku_dcase19](https://github.com/kkoutini/cpjku_dcase19)
+`RFR-CNN-2019` is a fork of [cpjku_dcase19](https://github.com/kkoutini/cpjku_dcase19)
 
 `RFR-CNN-2020` is an updated version of that repo for DCASE 2020, forked from [cpjku_dcase20](https://github.com/kkoutini/cpjku_dcase20)
 
