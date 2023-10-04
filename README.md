@@ -1,5 +1,8 @@
 # Acoustic Scene Classification
- Repo for investigating available acoustic scene classification methods and datasets
+Repository for investigating available acoustic scene classification (ASC) methods and datasets.
+
+
+## Repository Directory
 
 `LateFusion`is a modified fork of this [DCASE2019-Task1](https://github.com/McDonnell-Lab/DCASE2019-Task1), detailed in "Acoustic Scene Classification Using Deep Residual Networks with Late Fusion of Separated High and Low Frequency Paths", available [here](https://dcase.community/documents/challenge2019/technical_reports/DCASE2019_McDonnell_53.pdf).
 
