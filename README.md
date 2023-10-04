@@ -1,2 +1,2 @@
 # acoustic_space_classification
- repo for investigating acoustic space classification methods and datasets
+ Repo for investigating available acoustic scene classification methods and datasets
