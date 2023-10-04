@@ -499,7 +499,7 @@ def cal_mean():
     c = []
     print("cal_mean ")
     lengsths_sum = 0
-    for i, (x, _, _) in enumerate(torch.utils.data.DataLoader(trainset, batch_size=1, shuffle=False, num_workers=8)):
+    for i, (x, _, _) in enumerate(torch.utils.data.DataLoader(trainset, batch_size=1, shuffle=False, num_workers=0)):
         # = trainset[i]
         if i == 0:
             print(x.shape)
