@@ -87,8 +87,11 @@ if args.load is not None:
     except:
         print("\n\nFailed: to load weights check that you have the correct rho value\n\n")
         raise
+
     print("model loaded, predicting...")
     sids, propbs = trainer.do_predict("eval",{})
+    print(sids[0])
+    print(propbs[0])
     print("sids:",len(sids),propbs.shape)
     torch.save((sids, propbs),str(datetime.now())+"eval_predictions.pth")
 else:
@@ -96,3 +99,6 @@ else:
     trainer.predict("last")
     trainer.load_best_model()
     trainer.predict()
+
+
+
