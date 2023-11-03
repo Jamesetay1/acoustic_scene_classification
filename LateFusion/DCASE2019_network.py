@@ -119,7 +119,7 @@ def model_resnet(num_classes,input_shape =[128,None,6], num_filters =24,wd=1e-3)
                              wd=My_wd,
                              use_relu = True)
         
-    #output layers after last sum
+    # Output layers after last sum
     OutputPath = resnet_layer(inputs=OutputPath,
                      num_filters=num_classes,
                      strides = 1,
@@ -127,10 +127,12 @@ def model_resnet(num_classes,input_shape =[128,None,6], num_filters =24,wd=1e-3)
                      learn_bn = False,
                      wd=My_wd,
                       use_relu=False)
+    
+    # Pretty sure I want whatever is right here 
     OutputPath = BatchNormalization(center=False, scale=False)(OutputPath)
     OutputPath = GlobalAveragePooling2D()(OutputPath)
     OutputPath = Activation('softmax')(OutputPath)
 
-    # Instantiate model.
+    # Instantiate model
     model = Model(inputs=inputs, outputs=OutputPath)
     return model
