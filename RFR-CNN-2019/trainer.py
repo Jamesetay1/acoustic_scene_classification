@@ -155,12 +155,14 @@ class Trainer:
     def init_loaders(self):
         # maybe lazy load for predicting only runs
         for name in self.config.datasets:
+            
             dataset_config = AttrDefault(lambda: None, self.config.datasets[name])
             if self.config['predict_only_mode'] and not dataset_config.predicting:
                 continue
             # ds = self.run.get_command_function(dataset_config.dataset)()
             ds = self.dataset_manager.get_dataset(dataset_config)
-        
+            print(f'ds: {ds}')
+            
             self.datasets[name] = ds
             shared_globals.logger.info("Initialized Dataset  `" + name + "` with {} Samples ".format(len(ds)))
             if dataset_config.batch_config.get("batch_sampler") == "stratified":
@@ -189,6 +191,7 @@ class Trainer:
                 worker_init_fn=worker_init_fn,
                 timeout=60
             )
+            print(len(loader.dataset))
             self.data_loaders[name] = loader
 
     def fit(self, epochs, start_epoch=0):
@@ -772,12 +775,17 @@ class Trainer:
             writer = self.writer
         # training mode
         model.eval()
+        print(f"type of model: {type(model)}")
+        pytorch_total_params = sum(p.numel() for p in model.parameters())
+        print(pytorch_total_params)
 
         loss_meter = AverageMeter()
         correct_meter = AverageMeter()
         metrics_meter = DictAverageMeter()
         start = time.time()
+        print(f"self.dataloaders  {self.data_loaders}")
         test_loader = self.data_loaders[dataset_name]
+        print(f"test loader: {len(test_loader.dataset)}")
         acc_sids = []
         acc_out = []
         for step, (data, sids, _) in enumerate(test_loader):
@@ -792,6 +800,10 @@ class Trainer:
 
             with torch.no_grad():
                 outputs = model(data).cpu()
+                
+            if step == 0: print(outputs)
+            if step == 0: print(f"sids: {sids}")
+            
             acc_sids += sids
             acc_out.append(outputs)
             if step % (len(test_loader) // 10) == 0:
@@ -802,7 +814,8 @@ class Trainer:
                 ), end="\r")
 
         elapsed = time.time() - start
-        logger.info('Elapsed {:.2f}'.format(elapsed))
+        print(elapsed)
+        logger.info('Time Elapsed {:.2f}s'.format(elapsed))
 
         return acc_sids, torch.cat(acc_out, 0)
 

@@ -85,6 +85,7 @@ class DatasetsManager:
             self.config['file_cache']
         sub_audio_path, sub_parser, sub_parser_args = self.config['sub_audio_path'],self.config['sub_parser'],\
                                                       self.config['sub_parser_args']
+        print(sub_audio_path)
         sub_audio_path = os.path.expanduser(sub_audio_path)
         global loaded_dataset_sub
         global label_encoder
@@ -186,6 +187,8 @@ class DatasetsManager:
         name, fold, train_files_csv, audio_processor = self.config.name, \
                                                        self.config.fold, self.config.train_files_csv, \
                                                        self.config.audio_processor
+        
+        print(name, train_files_csv)
         ds = self.df_get_train_set()
 
         if subsample == 1:

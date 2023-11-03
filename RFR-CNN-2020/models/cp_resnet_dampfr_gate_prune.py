@@ -12,7 +12,7 @@ import math
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from torch._six import container_abcs
+import collections.abc as container_abcs
 from torch.nn.modules.conv import _ConvNd
 from torch.utils.checkpoint import checkpoint_sequential
 import numpy as np

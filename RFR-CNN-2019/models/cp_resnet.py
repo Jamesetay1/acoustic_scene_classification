@@ -312,8 +312,10 @@ class Network(nn.Module):
         logit = x.squeeze(2).squeeze(2)
 
         if first_RUN: print("logit:", logit.size())
+        if first_RUN: print(logit)
         if self.apply_softmax:
             logit = torch.softmax(logit, 1)
+        if first_RUN: print(torch.softmax(logit, 1))
         first_RUN = False
         return logit
 

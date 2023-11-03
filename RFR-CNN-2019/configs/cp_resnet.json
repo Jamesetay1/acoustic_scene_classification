@@ -34,10 +34,10 @@
     "spec_resize": false,
     "stereo_desync": false,
     "stereo_flip": false,
-    "sub_audio_path": "datasets/sub/TAU-urban-acoustic-scenes-2019-evaluation/",
+    "sub_audio_path": "datasets/sub/TAU-urban-acoustic-scenes-2019-development",
     "sub_parser": "nolabel_csv",
     "sub_parser_args": {
-      "csv_file": "datasets/sub/TAU-urban-acoustic-scenes-2019-evaluation/evaluation_setup/test.csv",
+      "csv_file": "datasets/sub/TAU-urban-acoustic-scenes-2019-development/evaluation_setup/fold1_test.csv",
       "files_col": 0,
       "header": 0
     },
