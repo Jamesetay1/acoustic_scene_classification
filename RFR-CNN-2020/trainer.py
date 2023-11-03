@@ -34,6 +34,7 @@ class Trainer:
         global logger
         logger = shared_globals.logger
         config = AttrDefault(lambda: None, config)
+       
 
         self.config = config
         self.datasets = {}
@@ -837,6 +838,7 @@ class Trainer:
 
                     # logger.info('total metrics:  {}'.format(str(eval_metrics)))
                 shared_globals.console.info("evaluation " + dataset_name + ":\n" + str(eval_metrics))
+                print(str(eval_metrics))
                 # if self.config.tensorboard:
                 # writer = self.writer
                 # writer.add_scalar(dataset_name + '/RunningLoss', loss_, shared_globals.global_step)

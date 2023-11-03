@@ -1,6 +1,8 @@
 import os
+import datetime
+import time
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
-os.environ["CUDA_VISIBLE_DEVICES"] = "2"
+os.environ["CUDA_VISIBLE_DEVICES"] = "7"
 
 import numpy as np
 import h5py
@@ -62,8 +64,20 @@ y_val_onehot = keras.utils.np_utils.to_categorical(y_val, num_classes)
 
 best_model = keras.models.load_model(model_path)
 
+print(data_val.size)
+print(data_val.shape)
+print('waiting 5 seconds...')
+time.sleep(5)
+
+
+# Do some work here
+start_time = datetime.datetime.now()
+
 preds = best_model.predict(data_val)
 y_pred_val = np.argmax(preds,axis=1)
+
+time_difference = datetime.datetime.now() - start_time
+print("Time difference:", time_difference)
 
 over_loss = log_loss(y_val_onehot, preds)
 overall_acc = np.sum(y_pred_val==y_val) / data_val.shape[0]
