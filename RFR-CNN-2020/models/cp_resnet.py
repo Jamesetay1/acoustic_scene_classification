@@ -274,7 +274,7 @@ class Network(nn.Module):
 
 
 
-def get_model_based_on_rho(rho, arch, config_only=False, model_config_overrides={}):
+def get_model_based_on_rho(rho, arch="cp_resnet", config_only=False, model_config_overrides={}):
     # extra receptive checking
     extra_kernal_rf = rho - 7
     model_config = {

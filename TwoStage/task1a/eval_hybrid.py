@@ -54,6 +54,7 @@ for i in range(prob_3class.shape[0]):
     preds[i, :] = prob_10class[i, :] * prob_map
 
 # preds is the final output probabilty 
+print(f"preds: {preds}")
 
 # get ground truth and do analysis
 val_csv = '10class/evaluation_setup/fold1_evaluate.csv'

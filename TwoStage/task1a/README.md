@@ -85,7 +85,7 @@ Pre-trained models are provided in `./3class/pretrained_models` and `./10class/p
 
 Please note that due to the size limitation of github, we compressed and splitted the fsFCNN model. Please recover it before evaluation.
 
-If you directly evaluate our provided pre-trained models by `eval_hybried.py`, you can get our reported results of 81.9% as follows, 
+If you directly evaluate our provided pre-trained models by `eval_hybrid.py`, you can get our reported results of 81.9% as follows, 
 
 ```shell
 Val acc:  0.819

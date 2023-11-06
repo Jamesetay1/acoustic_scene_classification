@@ -8,7 +8,7 @@ import soundfile as sound
 from multiprocessing import Pool
 
 
-file_path = '../data/TAU2020MDev/TAU-urban-acoustic-scenes-2020-mobile-development/'
+file_path = '/work/contractors/jtaylor/acoustic_scene_classification/RFR-CNN-2019/datasets/TAU-urban-acoustic-scenes-2020-mobile-development/'
 csv_file = 'evaluation_setup_v2/fold1_evaluate.csv'
 output_path = 'features/logmel128_scaled'
 feature_type = 'logmel'
