@@ -230,5 +230,6 @@ fabric.properties
 .idea/caches/build_file_checksums.ser
 
 datasets/
+data/
 logmel128_scaled/
 10class-fsfcnn-model-0.7620.hdf5
