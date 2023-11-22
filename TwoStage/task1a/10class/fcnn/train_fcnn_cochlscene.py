@@ -34,11 +34,12 @@ aug_csv = '/work/contractors/jtaylor/acoustic_scene_classification/data/CochlSce
 feat_path = '/work/contractors/jtaylor/acoustic_scene_classification/data/CochlScene/features/logmel128_scaled/'
 #aug_path = 'features/logmel128_reverb_scaled/'
 
-experiments = 'cochlscene_run/'
+experiments = 'cochlscene_run_ttaudi/'
 
 if not os.path.exists(experiments):
     os.makedirs(experiments)
 
+##########################################################
 
 #train_aug_csv = generate_train_aug_csv(train_csv, aug_csv, feat_path, aug_path, experiments)
 train_aug_csv = train_csv
@@ -47,21 +48,36 @@ num_audio_channels = 1
 num_freq_bin = 128
 num_classes = 13
 max_lr = 0.1
-batch_size = 32
-num_epochs = 254
+batch_size = 64
+num_epochs = 50
 mixup_alpha = 0.4
 crop_length = 400
 sample_num = len(open(train_aug_csv, 'r').readlines()) - 1
+print(f'Numbers of training samples: {sample_num}')
 
 
 # compute delta and delta delta for validation data
 data_val, y_val = load_data_2020(feat_path, val_csv, num_freq_bin, 'logmel')
+print(f'y values: {y_val}')
+print(f'validation data shape: {data_val.shape}')
+
+
 data_deltas_val = deltas(data_val)
+print(f'validation data deltas shape: {data_deltas_val.shape}')
+
 data_deltas_deltas_val = deltas(data_deltas_val)
+print(f'validation data delta deltas shape: {data_deltas_val.shape}')
+
 data_val = np.concatenate((data_val[:,:,4:-4,:],data_deltas_val[:,:,2:-2,:],data_deltas_deltas_val),axis=-1)
+print(f'validation data delta deltas shape: {data_deltas_val.shape}')
+
 y_val = keras.utils.to_categorical(y_val, num_classes)
 
+##########################################################
+
 model = model_fcnn(num_classes, input_shape=[num_freq_bin, None, 3*num_audio_channels], num_filters=[48, 96, 192], wd=0)
+
+##########################################################
 
 model.compile(loss='categorical_crossentropy',
               optimizer =SGD(lr=max_lr,decay=1e-6, momentum=0.9, nesterov=False),
@@ -76,11 +92,13 @@ save_path = experiments + "/model-{epoch:02d}-{val_acc:.4f}.hdf5"
 checkpoint = keras.callbacks.ModelCheckpoint(save_path, monitor='val_acc', verbose=1, save_best_only=False, mode='max')
 callbacks = [lr_scheduler, checkpoint]
 
+##########################################################
+
 # Due to the memory limitation, in the training stage we split the training data
 train_data_generator = Generator_timefreqmask_withdelta_splitted(feat_path, train_aug_csv, num_freq_bin,
                               batch_size=batch_size,
                               alpha=mixup_alpha,
-                              crop_length=crop_length, splitted_num=20)()
+                              crop_length=crop_length, splitted_num=20, classes=13)()
 
 history = model.fit_generator(train_data_generator,
                               validation_data=(data_val, y_val),
