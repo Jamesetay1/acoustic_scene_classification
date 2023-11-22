@@ -61,7 +61,7 @@ def threadsafe_generator(f):
 
 
 class Generator_timefreqmask_withdelta_splitted():
-    def __init__(self, feat_path, train_csv, feat_dim, batch_size=32, alpha=0.2, shuffle=True, crop_length=400, splitted_num=4): 
+    def __init__(self, feat_path, train_csv, feat_dim, batch_size=32, alpha=0.2, shuffle=True, crop_length=400, splitted_num=4, classes=10): 
         self.feat_path = feat_path
         self.train_csv = train_csv
         self.feat_dim = feat_dim
@@ -72,6 +72,7 @@ class Generator_timefreqmask_withdelta_splitted():
         self.lock = threading.Lock()
         self.NewLength = crop_length
         self.splitted_num = splitted_num
+        self.classes = classes
         
     def __iter__(self):
         return self
@@ -93,8 +94,9 @@ class Generator_timefreqmask_withdelta_splitted():
                         e = self.sample_num
 
                     lines = indexes[s:e]
-                    X_train, y_train = load_data_2020_splitted(self.feat_path, self.train_csv, self.feat_dim, lines, 'logmel')
-                    y_train = keras.utils.to_categorical(y_train, 10)
+                    X_train, y_train = load_data_2020_splitted(self.feat_path, self.train_csv, self.feat_dim, lines, 'logmel')#
+                    # Change back to 10 as needed
+                    y_train = keras.utils.to_categorical(y_train, self.classes)
                     X_deltas_train = deltas(X_train)
                     X_deltas_deltas_train = deltas(X_deltas_train)
                     X_train = np.concatenate((X_train[:,:,4:-4,:],X_deltas_train[:,:,2:-2,:],X_deltas_deltas_train),axis=-1)

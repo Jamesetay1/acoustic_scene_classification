@@ -26,14 +26,15 @@ session = InteractiveSession(config=config)
 # Please put your csv file for train and validation here.
 # If you dont generate the extra augmented data, please use 
 # ../evaluation_setup/fold1_train.csv and delete the aug_csv part
-train_csv = 'evaluation_setup/fold1_train_all.csv'
-val_csv = 'evaluation_setup/fold1_evaluate.csv'
+train_csv = '../evaluation_setup_v2/fold1_train.csv'
+val_csv = '../evaluation_setup_v2/fold1_evaluate.csv'
+aug_csv = '../evaluation_setup_v2/fold1_train.csv'
 #aug_csv = 'evaluation_setup/fold1_train_a_2003.csv'
 
-feat_path = 'features/logmel128_scaled_full/'
+feat_path = '../features/logmel128_scaled/'
 #aug_path = 'features/logmel128_reverb_scaled/'
 
-experiments = 'exp_2020_fcnn_channelattention_scaled_specaugment_timefreqmask_speccorr_together_nowd_alldata/'
+experiments = 'training_sample_run/'
 
 if not os.path.exists(experiments):
     os.makedirs(experiments)

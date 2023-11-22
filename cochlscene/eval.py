@@ -18,12 +18,14 @@ def do_testing(params):
             - Validation set: Precision, Recall, F-score
             - Test set: Precision, Recall, F-score, Confusion matrix
     '''
+    print(params)
     MODEL_FILENAME = params['MODEL_FILENAME']
     BATCH_SIZE = params['BATCH_SIZE']
     DATASET_DIR = params['DATASET_DIR']
     RESULT_DIR = params['RESULT_DIR']
     labels = os.listdir(os.path.join(DATASET_DIR, "Train"))
     labels.sort()
+    print(labels)
 
     # Load model and predict
     model = tf.keras.models.load_model(MODEL_FILENAME, 
@@ -32,35 +34,36 @@ def do_testing(params):
                                            'ApplyFilterbank':ApplyFilterbank, 
                                            'MagnitudeToDecibel':MagnitudeToDecibel}
                                        )
+    print("model loaded")
 
-    # # # Training set performance check
-    train_wav_list, train_label_list = parse_data_list(params, "Train")
-    train_ds = generate_dataset(params, train_wav_list, train_label_list)
-    train_ds = train_ds.batch(BATCH_SIZE)
-    y = model.predict(train_ds)
-    y = tf.math.argmax(y, -1)
-    train_label_list = tf.math.argmax(train_label_list, -1)
-    # Precision, Recall, F-score
-    print("# # # # # Training set # # # # #")
-    p, r, fscore, support = precision_recall_fscore_support(train_label_list, y)
-    print("Label          \tPrecision\tRecall\tF-score")
-    for i in range(len(labels)):
-        print("{}\t{:.3f}    \t{:.3f} \t{:.3f}".format(labels[i].ljust(15), p[i], r[i], fscore[i]))
+    # # # # Training set performance check
+    # train_wav_list, train_label_list = parse_data_list(params, "Train")
+    # train_ds = generate_dataset(params, train_wav_list, train_label_list)
+    # train_ds = train_ds.batch(BATCH_SIZE)
+    # y = model.predict(train_ds)
+    # y = tf.math.argmax(y, -1)
+    # train_label_list = tf.math.argmax(train_label_list, -1)
+    # # Precision, Recall, F-score
+    # print("# # # # # Training set # # # # #")
+    # p, r, fscore, support = precision_recall_fscore_support(train_label_list, y)
+    # print("Label          \tPrecision\tRecall\tF-score")
+    # for i in range(len(labels)):
+    #     print("{}\t{:.3f}    \t{:.3f} \t{:.3f}".format(labels[i].ljust(15), p[i], r[i], fscore[i]))
 
 
-    # # # Validation set performance check
-    val_wav_list, val_label_list = parse_data_list(params, "Val")
-    valid_ds = generate_dataset(params, val_wav_list, val_label_list)
-    valid_ds = valid_ds.batch(BATCH_SIZE)
-    y = model.predict(valid_ds)
-    y = tf.math.argmax(y, -1)
-    val_label_list = tf.math.argmax(val_label_list, -1)
-    # Precision, Recall, F-score
-    print("# # # # # Validation set # # # # #")
-    p, r, fscore, support = precision_recall_fscore_support(val_label_list, y)
-    print("Label          \tPrecision\tRecall\tF-score")
-    for i in range(len(labels)):
-        print("{}\t{:.3f}    \t{:.3f} \t{:.3f}".format(labels[i].ljust(15), p[i], r[i], fscore[i]))
+    # # # # Validation set performance check
+    # val_wav_list, val_label_list = parse_data_list(params, "Val")
+    # valid_ds = generate_dataset(params, val_wav_list, val_label_list)
+    # valid_ds = valid_ds.batch(BATCH_SIZE)
+    # y = model.predict(valid_ds)
+    # y = tf.math.argmax(y, -1)
+    # val_label_list = tf.math.argmax(val_label_list, -1)
+    # # Precision, Recall, F-score
+    # print("# # # # # Validation set # # # # #")
+    # p, r, fscore, support = precision_recall_fscore_support(val_label_list, y)
+    # print("Label          \tPrecision\tRecall\tF-score")
+    # for i in range(len(labels)):
+    #     print("{}\t{:.3f}    \t{:.3f} \t{:.3f}".format(labels[i].ljust(15), p[i], r[i], fscore[i]))
 
 
     test_wav_list, test_label_list = parse_data_list(params, "Test")
@@ -89,13 +92,14 @@ def save_confusionmatrix(y_true, y_esti, labels, path):
             draws a figure, and saves it.
     '''
     cm = confusion_matrix(y_true, y_esti)
+    print(cm)
 
     plt.figure(figsize=(10,11))
     ax = sns.heatmap(cm, annot=True, fmt='d' ,cmap='Blues')
 
     # ax.set_title('Confusion Matrix\n\n');
     ax.set_xlabel('Predicted classes')
-    ax.set_ylabel('Actual classes');
+    ax.set_ylabel('Actual classes')
 
     # Labels
     ax.xaxis.set_ticklabels(labels, rotation=45, ha='right', minor=False)
@@ -104,4 +108,4 @@ def save_confusionmatrix(y_true, y_esti, labels, path):
     plt.show()
     plt.savefig(os.path.join(path, "Confusion_matrix_original.eps"))
     plt.close()
-    return 
+    return

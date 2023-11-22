@@ -9,7 +9,7 @@ from multiprocessing import Pool
 
 
 file_path = '/work/contractors/jtaylor/acoustic_scene_classification/RFR-CNN-2019/datasets/TAU-urban-acoustic-scenes-2020-mobile-development/'
-csv_file = 'evaluation_setup_v2/fold1_evaluate.csv'
+csv_file = 'evaluation_setup_v2/fold1_train.csv'
 output_path = 'features/logmel128_scaled'
 feature_type = 'logmel'
 
@@ -29,7 +29,6 @@ wavpath = data_df['filename'].tolist()
 
 
 for i in range(len(wavpath)):
-    print(f'{wavpath}\n')
     stereo, fs = sound.read(file_path + wavpath[i], stop=duration*sr)
     logmel_data = np.zeros((num_freq_bin, num_time_bin, num_channel), 'float32')
     logmel_data[:,:,0]= librosa.feature.melspectrogram(stereo[:], sr=sr, n_fft=num_fft, hop_length=hop_length, n_mels=num_freq_bin, fmin=0.0, fmax=sr/2, htk=True, norm=None)

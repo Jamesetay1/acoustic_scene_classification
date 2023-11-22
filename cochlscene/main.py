@@ -119,8 +119,8 @@ def main():
             baseline model training/evaluation process
     '''
     params = get_params()
-    train_history = do_learning(params)
-    save_train_history(params, train_history)
+    #train_history = do_learning(params)
+    #save_train_history(params, train_history)
     do_testing(params)
 
 

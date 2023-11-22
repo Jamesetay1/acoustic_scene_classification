@@ -6,10 +6,10 @@ def get_params():
     '''
     params = dict()
 
-    params['DATASET_DIR'] = "./cochlscene_data"
+    params['DATASET_DIR'] = "../data/CochlScene"
     params['DATASET_INFO'] = "Data_info.tsv"
     
-    # Audio data parameters
+    # Auio data parameters
     params['AUDIO_DURATION'] = 10
     params['SAMPLING_RATE'] = 44100
 
