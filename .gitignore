@@ -237,3 +237,4 @@ LateFusion/LMval.pckl
 TwoStage/task1a/10class/pretrained_models/combined.zip
 cochlscene_run/
 training_sample_run/
+model-*
