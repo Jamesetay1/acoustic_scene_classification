@@ -10,6 +10,6 @@ Repository for investigating available acoustic scene classification (ASC) metho
 
 `RFR-CNN-2020` is an updated version of that repo for DCASE 2020, forked from [cpjku_dcase20](https://github.com/kkoutini/cpjku_dcase20)
 
-`TwoStage` is a modfied fork of [DCASE2020_task1](https://github.com/MihawkHu/DCASE2020_task1), detailed in "Device-Robust Acoustic Scene Classification Based on Two-Stage Categorization and Data Augmentation", available [here](https://dcase.community/documents/challenge2020/technical_reports/DCASE2020_Hu_114.pdf)https://dcase.community/documents/challenge2020/technical_reports/DCASE2020_Hu_114.pdf.
+`TwoStage` is a modfied fork of [DCASE2020_task1](https://github.com/MihawkHu/DCASE2020_task1), detailed in "Device-Robust Acoustic Scene Classification Based on Two-Stage Categorization and Data Augmentation", available [here](https://dcase.community/documents/challenge2020/technical_reports/DCASE2020_Hu_114.pdf)
 
 `scripts` involves helper scripts I've created
