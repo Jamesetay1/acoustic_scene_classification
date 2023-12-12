@@ -19,7 +19,7 @@ source activate $ENVNAME
 #conda install -y tensorflow-gpu-base
 #conda install -y -c anaconda tensorflow-gpu
 #conda install -y -c anaconda
-pip install  keras sed_eval pynvrtc dcase_util attrdict GitPython pymongo torch IPython
+pip install  keras sed_eval pynvrtc dcase_util attrdict GitPython pymongo torch IPython 
 
 
 # tensorflow gpu, go to: https://www.tensorflow.org/install
