@@ -1,0 +1,15 @@
+speciality,meta_csv,audios
+bell,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_bell_2023/annotation_results/meta.csv,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_bell_2023/audios
+bird,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_birds_2023/annotation_results/meta.csv,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_birds_2023/audios
+car,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_car_2023/annotation_results/meta_1.csv,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_car_2023/audios 
+car,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_car_2023/annotation_results/meta_2.csv,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_car_2023/audios 
+car_cabin,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_car_cabin_noises_2023/annotation_results/meta.csv,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_car_cabin_noises_2023/audios
+dog,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_dog_2023/annotation_results/meta.csv,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_dog_2023/audios
+door,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_door_2023/annotation_results/meta.csv,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_door_2023/audios
+eating,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_eating_2023/annotation_results/meta.csv,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_eating_2023/audios
+fan,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_fan_2023/annotation_results/meta.csv,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_fan_2023/audios
+kids_screaming,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_kids_screaming_2023/annotation_results/meta.csv,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_kids_screaming_2023/audios
+kitchen_noises,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_kitchen_2023/annotation_results/meta.csv,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_kitchen_2023/audios 
+low_rev_engines,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_low_rev_engine_2023/annotation_results/meta.csv,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_low_rev_engine_2023/audios
+water,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_water_2023/annotation_results/meta.csv,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_water_2023/audios
+wind,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_wind_2023/annotation_results/meta.csv,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_wind_2023/audios
