@@ -1,0 +1,51 @@
+id,specialty,file_path,predicted,correct
+3133,inside car,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_car_cabin_noises_2023/audios/017/zapsplat_p1_car_cabin_noises_2023_003098.wav,fan,False
+2960,inside car,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_car_cabin_noises_2023/audios/006/zapsplat_p1_car_cabin_noises_2023_001195.wav,engine,False
+938,bell,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_bell_2023/audios/007/zapsplat_p1_bell_2023_01280.wav,water,False
+2055,car,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_car_2023/audios/000/zapsplat_p1_car_2023_000246.wav,inside car,False
+6698,kitchen,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_kitchen_2023/audios/003/zapsplat_p1_kitchen_2023_00637.wav,engine,False
+1655,car,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_car_2023/audios/009/zapsplat_p1_car_2023_002794.wav,inside car,False
+6543,kitchen,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_kitchen_2023/audios/001/zapsplat_p1_kitchen_2023_00317.wav,eat,False
+6969,engine,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_low_rev_engine_2023/audios/000/zapsplat_p1_low_rev_engine_2023_00034.wav,wind,False
+2153,car,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_car_2023/audios/008/zapsplat_p1_car_2023_002405.wav,inside car,False
+579,bell,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_bell_2023/audios/004/zapsplat_p1_bell_2023_00798.wav,water,False
+2835,inside car,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_car_cabin_noises_2023/audios/005/zapsplat_p1_car_cabin_noises_2023_000925.wav,wind,False
+6720,kitchen,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_kitchen_2023/audios/003/zapsplat_p1_kitchen_2023_00694.wav,water,False
+1822,car,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_car_2023/audios/002/zapsplat_p1_car_2023_000855.wav,engine,False
+5713,eat,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_eating_2023/audios/017/zapsplat_p1_eating_2023_03208.wav,water,False
+6671,kitchen,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_kitchen_2023/audios/003/zapsplat_p1_kitchen_2023_00560.wav,eat,False
+6790,kitchen,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_kitchen_2023/audios/004/zapsplat_p1_kitchen_2023_00858.wav,door,False
+3167,inside car,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_car_cabin_noises_2023/audios/017/zapsplat_p1_car_cabin_noises_2023_003224.wav,fan,False
+2783,inside car,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_car_cabin_noises_2023/audios/018/zapsplat_p1_car_cabin_noises_2023_003333.wav,engine,False
+6544,kitchen,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_kitchen_2023/audios/001/zapsplat_p1_kitchen_2023_00318.wav,eat,False
+6754,kitchen,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_kitchen_2023/audios/004/zapsplat_p1_kitchen_2023_00777.wav,eat,False
+1809,car,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_car_2023/audios/005/zapsplat_p1_car_2023_001701.wav,engine,False
+456,bell,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_bell_2023/audios/003/zapsplat_p1_bell_2023_00642.wav,water,False
+7617,water,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_water_2023/audios/0001/zapsplat_p1_water_2023_000291.wav,kitchen,False
+6434,kitchen,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_kitchen_2023/audios/000/zapsplat_p1_kitchen_2023_00177.wav,eat,False
+1611,car,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_car_2023/audios/003/zapsplat_p1_car_2023_000904.wav,inside car,False
+2140,car,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_car_2023/audios/007/zapsplat_p1_car_2023_002394.wav,engine,False
+6055,kids,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_kids_screaming_2023/audios/001/zapsplat_p1_kids_screaming_2023_00259.wav,kitchen,False
+4639,door,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_door_2023/audios/007/zapsplat_p1_door_2023_01361.wav,inside car,False
+6530,kitchen,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_kitchen_2023/audios/001/zapsplat_p1_kitchen_2023_00304.wav,eat,False
+3372,dog,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_dog_2023/audios/002/zapsplat_p1_dog_2023_00386.wav,eat,False
+2720,inside car,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_car_cabin_noises_2023/audios/016/zapsplat_p1_car_cabin_noises_2023_002908.wav,wind,False
+7197,engine,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_low_rev_engine_2023/audios/003/zapsplat_p1_low_rev_engine_2023_00544.wav,fan,False
+5648,eat,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_eating_2023/audios/014/zapsplat_p1_eating_2023_02657.wav,water,False
+6758,kitchen,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_kitchen_2023/audios/004/zapsplat_p1_kitchen_2023_00784.wav,eat,False
+2639,inside car,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_car_cabin_noises_2023/audios/013/zapsplat_p1_car_cabin_noises_2023_002420.wav,engine,False
+5755,eat,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_eating_2023/audios/020/zapsplat_p1_eating_2023_03611.wav,water,False
+1993,car,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_car_2023/audios/001/zapsplat_p1_car_2023_000424.wav,inside car,False
+1825,car,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_car_2023/audios/004/zapsplat_p1_car_2023_001443.wav,engine,False
+595,bell,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_bell_2023/audios/004/zapsplat_p1_bell_2023_00816.wav,water,False
+1905,car,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_car_2023/audios/005/zapsplat_p1_car_2023_001551.wav,inside car,False
+6813,kitchen,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_kitchen_2023/audios/005/zapsplat_p1_kitchen_2023_00911.wav,engine,False
+7230,engine,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_low_rev_engine_2023/audios/000/zapsplat_p1_low_rev_engine_2023_00113.wav,bell,False
+2102,car,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_car_2023/audios/002/zapsplat_p1_car_2023_000744.wav,inside car,False
+6836,kitchen,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_kitchen_2023/audios/005/zapsplat_p1_kitchen_2023_00966.wav,wind,False
+2051,car,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_car_2023/audios/004/zapsplat_p1_car_2023_001341.wav,inside car,False
+2828,inside car,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_car_cabin_noises_2023/audios/005/zapsplat_p1_car_cabin_noises_2023_000917.wav,car,False
+1782,car,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_car_2023/audios/010/zapsplat_p1_car_2023_003029.wav,inside car,False
+7290,engine,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_low_rev_engine_2023/audios/002/zapsplat_p1_low_rev_engine_2023_00424.wav,fan,False
+2012,car,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_car_2023/audios/005/zapsplat_p1_car_2023_001504.wav,inside car,False
+1778,car,/bucket/data_collection/datasets/purchased_data/source/zapsplat_p1_car_2023/audios/008/zapsplat_p1_car_2023_002589.wav,wind,False
